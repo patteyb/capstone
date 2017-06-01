@@ -1,0 +1,44 @@
+<md-toolbar class="md-menu-toolbar" id="top" hide show-gt-xs>
+    <div  class="yellow" layout="row" layout-align="space-between center">
+        <div class="page-title" flex hide show-gt-md>
+                {{ vm.page }}
+        </div>
+        <div class="main-menu">
+            <md-menu-bar>
+                <menu></menu>
+            </md-menu-bar>        
+        </div>
+        <md-toolbar-filler layout="" layout-align="center center" hide show-gt-sm>
+        </md-toolbar-filler>
+        <md-input-container class="search">
+            <md-select name='breed' ng-model="breed._id" placeholder="Select a breed" ng-change="vm.getDogDetail(breed._id)">
+                <md-option value="{{breed._id}}" ng-repeat="breed in vm.dbBreeds"> {{ breed.breed }}</md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+</md-toolbar>
+
+<md-toolbar class="md-toolbar-tools" hide show-xs>
+    <md-toolbar-filler layout="" layout-align="center center"></md-toolbar-filler>
+    <div class="burger-nav-button yellow" hide show-xs>
+        <a href="" ng-click="vm.toggleLeft()"/>
+            <img class="no-border" src="/images/menu.png">
+        </a>
+    </div>
+    </div>
+</md-toolbar>
+
+<md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4">
+    <div class="main-menu-sidenav" layout-margin="">
+        <md-button ng-click="vm.toggleLeft()">Close Menu</md-button>
+        <md-menu-bar>
+            <menu layout="column"></menu>
+        </md-menu-bar> 
+    </div>
+</md-sidenav>
+
+<div class="salutation" ng-show="vm.currentUser.isAuthenticated">
+    <strong>Welcome, {{ vm.currentUser.fullName }}!</strong>
+</div>
+
+

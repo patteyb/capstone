@@ -1,0 +1,29 @@
+<div>
+  <toolbar></toolbar>
+</div>
+<md-content>
+    <md-nav-bar
+        md-selected-nav-item="vm.listType"
+        nav-bar-aria-label="navigation links">
+        <md-nav-item name="apartment" md-nav-click="vm.getList('apartment')">
+            <i class="mdi mdi-paw"></i> Apartment Dogs
+        </md-nav-item>
+        <md-nav-item name="active" md-nav-click="vm.getList('active')">
+            <i class="mdi mdi-paw"></i> Dogs on the Go
+        </md-nav-item>
+        <md-nav-item name="lowMaintenance" md-nav-click="vm.getList('lowMaintenance')">
+            <i class="mdi mdi-paw"></i> Low Maintenance
+        </md-nav-item>
+        <md-nav-item name="family" md-nav-click="vm.getList('family')">
+            <i class="mdi mdi-paw"></i> Family
+        </md-nav-item>
+        <md-nav-item name="guard" md-nav-click="vm.getList('guard')">
+            <i class="mdi mdi-paw"></i> Guard
+        </md-nav-item>
+        <md-nav-item name="quiet" md-nav-click="vm.getList('quiet')">
+            <i class="mdi mdi-paw"></i> Quietest
+        </md-nav-item>
+    </md-nav-bar>
+</md-content>
+
+<div ui-view="card"></div>
