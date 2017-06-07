@@ -90,6 +90,7 @@
             if ($stateParams.id) {
                 getDog($stateParams.id).then(function(dog) {
                     vm.dog = dog;
+                    document.getElementById('longDesc').innerHTML = vm.dog.longDesc;
                     vm.page = 'Breed // ' + vm.dog.breed;
                     getVideos(vm.dog.breed);
                 });

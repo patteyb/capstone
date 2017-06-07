@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div layout="row" layout-align="start center">
+                    <div layout="row">
                         <div class="icon-medium" flex="25" layout-fill layout-padding>
                             <p><img class="icon left" ng-src="/images/{{ vm.dog.groomIcon }}Groom.png">
                         </div>
@@ -116,9 +116,9 @@
                             </md-card-content>
                         </md-card>
                     </div>
-                    <div layout="row">
-                            {{ vm.dog.longDesc }}
-                        </div>
+                    <div layout="column" id="longDesc">
+
+                    </div>
                     <md-card-actions layout="row" layout-wrap layout-align="space-around center">
                         <div ng-hide="!vm.dog.breedStandard">
                             <a href="{{ vm.dog.breedStandard }}" target="_blank">
